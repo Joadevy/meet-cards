@@ -1,0 +1,36 @@
+[
+    {"role" : "ceo",
+    "ceoimg" : "assets/people/richard.png",
+    "ceotext" : "Chief Executive Officer, his primary responsibilities includes making major corporate decisions, managing the overall operations and resources of a company.",
+    "ceoname": "Richard Hendricks"},
+    
+    {"role" : "frontend",
+    "url" : "assets/people/dinesh.png",
+    "text" : "Software Engineer in charge of the visual web experience.",
+    "name" : "Dinesh Nanjiani"},
+
+    {"role" : "project manager",
+    "url" : "assets/people/monica.png",
+    "text" : "Project manager, responsible for the planning, development and installation systems or new technology within the business.",
+    "name" : "Monica Crew"},
+
+    {"role" : "network engineer",
+    "url" : "assets/people/gilfoyle.png",
+    "text" : "Network Engineer, a technically demanding role. It involves designing, setting up and maintaining communication systems",
+    "name" : "Gilfoyle Starr"},
+    
+    {"role" : "technical sales",
+    "url" : "assets/people/laurie.png",
+    "text" : "Techical sales lead, it involves providing advice to customers before and after sales",
+    "name" : "Laurie Bream"},
+
+    {"role" : "technical support",
+    "url" : "assets/people/jared.png",
+    "text" : "Technical support, We all need a bit of technology help sometimes. He is in charge of support, monitor and maintain the technology of the workplace and respond to requests for help from users in the business.",
+    "name" : "Jared Dunn"},
+
+    {"role" : "software tester",
+    "image" : "assets/people/Erlich.png",
+    "text" : "Software tester, required to test, fix and analyse systems to determine how it could fail.",
+    "name" : "Erlich Bachman"}
+]
