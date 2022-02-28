@@ -12,6 +12,15 @@ btnPrevious.addEventListener('click', () => {
     changePerson ('previous');
 })
 
+btnRandom.addEventListener('click', () => {
+    let newIndex;
+    do {
+        newIndex = Math.round(Math.random()*6);
+    } while (newIndex == index);
+    index = newIndex;
+    showInfo(index);
+})
+
 
 // Gets the information from the JSON using a fetch request.
 const getInfo = async() => {
@@ -27,22 +36,9 @@ const getInfo = async() => {
 const showInfo = async(index) => {
     let info = await getInfo();
     let personalData;
-    /* for (let data in info){
-        if (info[data].role == role) {
-            personalData= info[data];
-        }
-    } */
     personalData = info[index];
     createCard(personalData)
 }
-
-showInfo(0);
-/* const printInfo = (url,text) => {
-    const image = containerData.firstElementChild.firstElementChild;
-    const paragraph = containerData.lastElementChild;
-    image.src = url;
-    paragraph.textContent = text; */
-//}
 
 const createCard = (info) => {
     let card = `<div class="img-person">
@@ -68,4 +64,7 @@ const changePerson = (button) => {
     }
     showInfo(index);
 }
+
+showInfo(index);
+
 
