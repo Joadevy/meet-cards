@@ -1,36 +1,36 @@
 [
-    {"role" : "ceo",
+    {"role" : "Chief Executive Officer",
     "url" : "assets/people/richard.png",
-    "text" : "Chief Executive Officer, his primary responsibilities includes making major corporate decisions, managing the overall operations and resources of a company.",
+    "text" : "His primary responsibilities includes making major corporate decisions, managing the overall operations and resources of a company.",
     "name": "Richard Hendricks"},
     
-    {"role" : "frontend",
+    {"role" : "Frontend engineer",
     "url" : "assets/people/dinesh.png",
     "text" : "Software Engineer in charge of the visual web experience.",
     "name" : "Dinesh Nanjiani"},
 
-    {"role" : "project manager",
+    {"role" : "Project manager",
     "url" : "assets/people/monica.png",
     "text" : "Project manager, responsible for the planning, development and installation systems or new technology within the business.",
     "name" : "Monica Crew"},
 
-    {"role" : "network engineer",
+    {"role" : "Network engineer",
     "url" : "assets/people/gilfoyle.png",
-    "text" : "Network Engineer, a technically demanding role. It involves designing, setting up and maintaining communication systems",
+    "text" : "A technically demanding role. It involves designing, setting up and maintaining communication systems",
     "name" : "Gilfoyle Starr"},
     
-    {"role" : "technical sales",
+    {"role" : "Technical sales lead",
     "url" : "assets/people/laurie.png",
-    "text" : "Techical sales lead, it involves providing advice to customers before and after sales",
+    "text" : "It involves providing advice to customers before and after sales",
     "name" : "Laurie Bream"},
 
-    {"role" : "technical support",
+    {"role" : "Technical Support",
     "url" : "assets/people/jared.png",
-    "text" : "Technical support, We all need a bit of technology help sometimes. He is in charge of support, monitor and maintain the technology of the workplace and respond to requests for help from users in the business.",
+    "text" : "We all need a bit of technology help sometimes. He is in charge of support, monitor and maintain the technology of the workplace.",
     "name" : "Jared Dunn"},
 
-    {"role" : "software tester",
-    "image" : "assets/people/Erlich.png",
-    "text" : "Software tester, required to test, fix and analyse systems to determine how it could fail.",
+    {"role" : "Software tester",
+    "url" : "assets/people/Erlich.png",
+    "text" : "Required to test, fix and analyse systems to determine how it could fail.",
     "name" : "Erlich Bachman"}
 ]
