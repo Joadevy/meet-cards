@@ -37,12 +37,24 @@ btnPrevious.addEventListener('click', () => {
 })
 
 btnRandom.addEventListener('click', () => {
+    cardContainer.classList.add('random');
+    cardContainer.addEventListener('animationstart',animationStarted,false);
+    cardContainer.addEventListener('animationend',animationFinished,false);
+
+    function animationStarted(e){
+        console.log(e.animationName + ' started');
+    }
+
+    function animationFinished(e) {
+        this.classList.remove("random");
+    }
+
     let newIndex;
     do {
         newIndex = Math.round(Math.random()*6);
     } while (newIndex == index);
     index = newIndex;
-    showInfo(index);
+    setTimeout(()=>showInfo(index),500)
 })
 
 
