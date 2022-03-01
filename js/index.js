@@ -2,14 +2,38 @@ const containerData = document.querySelector('.data');
 const btnPrevious = document.getElementById('previous');
 const btnRandom = document.getElementById('random');
 const btnNext = document.getElementById('next');
+const cardContainer = document.querySelector('.card-container');
 let index = 0;
 
 btnNext.addEventListener('click', () => {
     changePerson ('next');
+    cardContainer.classList.add('next');
+    cardContainer.addEventListener('animationstart',animationStarted,false);
+    cardContainer.addEventListener('animationend',animationFinished,false);
+
+    function animationStarted(e){
+        console.log("La animacion "+ e.animationName+" acaba de empezar");
+    }
+
+    function animationFinished(e) {
+        this.classList.remove("next");
+    }
 })
+
 
 btnPrevious.addEventListener('click', () => {
     changePerson ('previous');
+    cardContainer.classList.add('previous');
+    cardContainer.addEventListener('animationstart',animationStarted,false);
+    cardContainer.addEventListener('animationend',animationFinished,false);
+
+    function animationStarted(e){
+        console.log(e.animationName + ' started');
+    }
+
+    function animationFinished(e) {
+        this.classList.remove("previous");
+    }
 })
 
 btnRandom.addEventListener('click', () => {
