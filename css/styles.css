@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&family=Pacifico&family=Shadows+Into+Light&family=Syne+Mono&display=swap');
 
 *{
     margin: 0;
@@ -32,7 +32,7 @@ h1 {
     justify-content: space-around;
     border: 1px solid #808080;
     width: 300px;
-    height: 400px;
+    height: 450px;
     border-radius: 15px;
     box-shadow: 0 -2px 5px #808080;
     position: relative;
@@ -42,6 +42,7 @@ h1 {
     text-align: center;
     color: darkgray;
     padding: 1.25rem;
+    font-family: 'Syne Mono', Arial, Helvetica, sans-serif;
 }
 
 .role {
@@ -59,11 +60,24 @@ h1 {
 }
 
 .description {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Arsenal',Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.options {
+    position: absolute;
+    bottom: 0;
+    left: 50;
 }
 
 .options img{
     cursor: pointer;
+    transform: scale(1);
+    transition: transform .25s;
+}
+
+.options img:hover {
+    transform: scale(1.1);
 }
 
 .wave {
