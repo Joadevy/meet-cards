@@ -86,7 +86,7 @@ const changePerson = (button) => {
             index = 6;
         }
     }
-    showInfo(index);
+    setTimeout(()=>showInfo(index),500) // Setting the time for waiting the animation (that have a duration of 1s)
 }
 
 showInfo(index);
