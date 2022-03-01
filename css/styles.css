@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 :root {
@@ -36,6 +37,14 @@ h1 {
     border-radius: 15px;
     box-shadow: 0 -2px 5px #808080;
     position: relative;
+}
+
+.previous{
+    animation: animPrevious 1s;
+}
+
+.next {
+    animation: animNext 1s;
 }
 
 .card-container header {
@@ -85,4 +94,32 @@ h1 {
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+@keyframes animPrevious {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes animNext {
+    0% {
+            transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(300%);
+    }
+
+    100% {
+            transform: translateX(0%);
+    }
 }
