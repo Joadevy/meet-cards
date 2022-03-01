@@ -5,49 +5,26 @@ const btnNext = document.getElementById('next');
 const cardContainer = document.querySelector('.card-container');
 let index = 0;
 
+
+cardContainer.addEventListener('animationend',animationFinished);
+
+function animationFinished() {
+    this.classList.remove("next","random","previous");
+}
+
 btnNext.addEventListener('click', () => {
     changePerson ('next');
     cardContainer.classList.add('next');
-    cardContainer.addEventListener('animationstart',animationStarted,false);
-    cardContainer.addEventListener('animationend',animationFinished,false);
-
-    function animationStarted(e){
-        console.log("La animacion "+ e.animationName+" acaba de empezar");
-    }
-
-    function animationFinished(e) {
-        this.classList.remove("next");
-    }
 })
 
 
 btnPrevious.addEventListener('click', () => {
     changePerson ('previous');
     cardContainer.classList.add('previous');
-    cardContainer.addEventListener('animationstart',animationStarted,false);
-    cardContainer.addEventListener('animationend',animationFinished,false);
-
-    function animationStarted(e){
-        console.log(e.animationName + ' started');
-    }
-
-    function animationFinished(e) {
-        this.classList.remove("previous");
-    }
 })
 
 btnRandom.addEventListener('click', () => {
     cardContainer.classList.add('random');
-    cardContainer.addEventListener('animationstart',animationStarted,false);
-    cardContainer.addEventListener('animationend',animationFinished,false);
-
-    function animationStarted(e){
-        console.log(e.animationName + ' started');
-    }
-
-    function animationFinished(e) {
-        this.classList.remove("random");
-    }
 
     let newIndex;
     do {
