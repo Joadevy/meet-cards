@@ -141,3 +141,9 @@ h1 {
         transform: translateY(0%);
     }
 }
+
+@media only screen and (max-width:300px) {
+    .card-container {
+        width: 250px;
+    }
+}
