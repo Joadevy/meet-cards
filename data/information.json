@@ -1,11 +1,11 @@
 [
     {"role" : "Chief Executive Officer",
-    "url" : "assets/people/richard.png",
+    "url" : "assets/people/Richard.png",
     "text" : "His primary responsibilities includes making major corporate decisions, managing the overall operations and resources of a company.",
     "name": "Richard Hendricks"},
     
     {"role" : "Frontend engineer",
-    "url" : "assets/people/dinesh.png",
+    "url" : "assets/people/Dinesh.png",
     "text" : "Software Engineer in charge of the visual web experience.",
     "name" : "Dinesh Nanjiani"},
 
@@ -15,7 +15,7 @@
     "name" : "Monica Crew"},
 
     {"role" : "Network engineer",
-    "url" : "assets/people/gilfoyle.png",
+    "url" : "assets/people/Gilfoyle.png",
     "text" : "A technically demanding role. It involves designing, setting up and maintaining communication systems",
     "name" : "Gilfoyle Starr"},
     
@@ -25,7 +25,7 @@
     "name" : "Laurie Bream"},
 
     {"role" : "Technical Support",
-    "url" : "assets/people/jared.png",
+    "url" : "assets/people/Jared.png",
     "text" : "We all need a bit of technology help sometimes. He is in charge of support, monitor and maintain the technology of the workplace.",
     "name" : "Jared Dunn"},
 
