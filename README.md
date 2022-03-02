@@ -17,6 +17,7 @@
 ## Overview
 This is a small project after learning in depth some concepts of the javascript language. I've created it so as to put the knowledge into practice because it's the way to acquire and really understand the things I've learned before. 
 In this time, I chose a 'meet team' project to practice FETCH requests and async/await concepts that are really important in JS.
+People in the cards of the project are inspired by the tv show: 'Silicon Valley'.
 
 ### The challenge
 Basically consists in cards with each person of a tech project. The information of all of them is located in a JSON file (simulating an API) and the app needs to make a fetch request to get it. Then I managed the responses so as to show it fine. For the project I used my knowledge in HTML and CSS too.
