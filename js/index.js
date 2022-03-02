@@ -3,37 +3,35 @@ const btnPrevious = document.getElementById('previous');
 const btnRandom = document.getElementById('random');
 const btnNext = document.getElementById('next');
 const cardContainer = document.querySelector('.card-container');
+
+// Declaring the index for the data JSON array.
 let index = 0;
 
-
+// Defining the event for the end of the animation.
 cardContainer.addEventListener('animationend',animationFinished);
 
+// Removing the classes after animation to re-run that when the user click the same button again.
 function animationFinished() {
     this.classList.remove("next","random","previous");
 }
 
+// Adding the functionality for change to the next person and adding the class to run the animation.
 btnNext.addEventListener('click', () => {
     changePerson ('next');
     cardContainer.classList.add('next');
 })
 
-
+// Adding the functionality for change to the next person and adding the class to run the animation.
 btnPrevious.addEventListener('click', () => {
     changePerson ('previous');
     cardContainer.classList.add('previous');
 })
 
+// Adding the functionality for change to the next person and adding the class to run the animation.
 btnRandom.addEventListener('click', () => {
+    changePerson('random');
     cardContainer.classList.add('random');
-
-    let newIndex;
-    do {
-        newIndex = Math.round(Math.random()*6);
-    } while (newIndex == index);
-    index = newIndex;
-    setTimeout(()=>showInfo(index),500)
 })
-
 
 // Gets the information from the JSON using a fetch request.
 const getInfo = async() => {
@@ -41,18 +39,19 @@ const getInfo = async() => {
         let request = await fetch('data/information.json'); // Accesing to the returned info of the fetch.
         let result = await request.json(); // Transforming the returned info of the fetch into JSON and accesing to the data.
         return result
-    } catch (error) {
+    } catch (error) { // Handling error.
         console.log(error);
     }
 }
 
+// Awaiting the info and sending it to the createCard.
 const showInfo = async(index) => {
     let info = await getInfo();
-    let personalData;
-    personalData = info[index];
-    createCard(personalData)
+    let personalData = info[index];
+    createCard(personalData);
 }
 
+// Creates the HTML card adding the information from the showInfo.
 const createCard = (info) => {
     let card = `<div class="img-person">
                     <img src="${info.url}" alt="person name">
@@ -63,6 +62,7 @@ const createCard = (info) => {
     containerData.innerHTML = card;
 }
 
+// Changing the index of the JSON array and calling the showInfo with the new index.
 const changePerson = (button) => {
     if (button === 'next') {
         index++;
@@ -74,10 +74,17 @@ const changePerson = (button) => {
         if (index == -1) {
             index = 6;
         }
+    } else if (button === 'random'){
+        let newIndex;
+        do { // Do-while to ensure that the newIndex != than index.
+            newIndex = Math.round(Math.random()*6);
+        } while (newIndex == index);
+        index = newIndex;
     }
-    setTimeout(()=>showInfo(index),500) // Setting the time for waiting the animation (that have a duration of 1s)
+    setTimeout(()=>showInfo(index),500) // Setting the time for waiting the animation (that has a duration of 1s)
 }
 
+// Shows the JSON-array[0] by default (data of Richard Hendricks / CEO).
 showInfo(index);
 
 
